@@ -31,8 +31,8 @@ CREATE TABLE shop.transactions (
 );
 
 INSERT INTO shop.users (UserName, PasswordHash, FirstName, LastName, PermissionLevel) VALUES
-("bobovas"		, SHA2("asdf"															, 256), "bobo"	, "vas"	, 4),
-("SCP-2770-1"	, SHA2("I think you forgot about the water table, you fucking idiot."	, 256), "1"		, "2770", 0);
+("bobovas"		, SHA2("asdf"															, 256), "bobo"	, "vas"	, "boris.n.vassilev@gmai.com"	, 4),
+("SCP-2770-1"	, SHA2("I think you forgot about the water table, you fucking idiot."	, 256), "1"		, "2770", "jo@hn.com"					, 0);
 
 
 INSERT INTO shop.products VALUES 
@@ -42,8 +42,6 @@ INSERT INTO shop.products VALUES
 ("кабел"				, "кабел (надъвкан)"										, 10.0  , 0),
 ("митковълнова печка"	, "ММММММММММММММММММММММММММММММММММММММММММММММММММММММММ", 119.0 , 0),
 ("тостер"				, "Аз съм тостер"											, 426.0 , 0);
-
-
 
 
 SELECT * FROM shop.users;
