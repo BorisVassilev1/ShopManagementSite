@@ -30,12 +30,12 @@ CREATE TABLE shop.transactions (
 	FOREIGN KEY(ProductID) REFERENCES shop.products(ProductID)
 );
 
-INSERT INTO shop.users (UserName, PasswordHash, FirstName, LastName, PermissionLevel) VALUES
+INSERT INTO shop.users (UserName, PasswordHash, FirstName, LastName, Email, PermissionLevel) VALUES
 ("bobovas"		, SHA2("asdf"															, 256), "bobo"	, "vas"	, "boris.n.vassilev@gmai.com"	, 4),
 ("SCP-2770-1"	, SHA2("I think you forgot about the water table, you fucking idiot."	, 256), "1"		, "2770", "jo@hn.com"					, 0);
 
 
-INSERT INTO shop.products VALUES 
+INSERT INTO shop.products (Name, Description, Price, CurrentQuantity) VALUES 
 ("печка"				, "пе4ка"													, 420.0 , 0),
 ("лестаро телевизор"	, "телевизор леново, ама стар"								, 1337.0, 0),
 ("ютия"					, "lorem Ipsum dolor sit amet, conseqteur adipiscing elit"	, 69.0  , 0),
