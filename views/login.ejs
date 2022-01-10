@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class=login-form>
+		<label for="fname">user name:</label>
+		<input type="text" id="username" class="font20pt"><br><br>
+		<label for="lname">password:</label>
+		<input type="password" id="password" class="font20pt"><br><br>
+
+		<button id="submit_button">Submit</button>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		document.getElementById("submit_button").addEventListener("click", () => {
+			$.post("/login/attempt", {
+				user: document.getElementById("username").value,
+				password: document.getElementById("password").value
+			}, (data) => {
+				console.log(data);
+				if(data == "1") {
+					location.href = "/";
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

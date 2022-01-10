@@ -1,0 +1,2 @@
+#!/bin/bash
+denon run --allow-net --allow-read=./ server.ts

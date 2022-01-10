@@ -1,0 +1,36 @@
+.login-button {
+	display: flex;
+	margin: auto;
+	padding: 10px;
+	font-size: 20px;
+	/*float: right;*/
+	justify-content: center;
+}
+
+.logout-button {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.login-form {
+	display: flex;
+	width: 20%;
+	margin: auto;
+	flex-direction: column;
+	font-size: 20pt;
+	padding-top: 10%;
+}
+
+.flexbox {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.font20pt {
+	font-size: 20pt;
+}
+
+body {
+	background-color: white;
+}
