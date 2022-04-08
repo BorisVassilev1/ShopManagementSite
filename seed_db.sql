@@ -44,4 +44,6 @@ INSERT INTO shop.products (Name, Description, Price, CurrentQuantity) VALUES
 ("тостер"				, "Аз съм тостер"											, 426.0 , 0);
 
 
+
 SELECT * FROM shop.users;
+SELECT * FROM shop.products;

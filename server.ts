@@ -59,8 +59,8 @@ router.post('/login/attempt', async(ctx: any, next) => {
 	}
 
 	const users = (await client.query(`select UserId, UserName, PasswordHash from shop.users where UserName='${user}'`))[0];
-	
-	if(users.UserId == null) {
+
+	if(!users || users.UserId == null) {
 		ctx.response.body = "0";
 		return;
 	}
